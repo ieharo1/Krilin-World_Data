@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Firebase desde cero con nuestra guía completa. Tutoriales, ejemplos prácticos y ejercicios.">
+    <meta name="author" content="Isaac Esteban Haro Torres">
+    <title>🔥 Firebase Desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">🔥 Firebase Desde Cero</a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#contenido">Contenido</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>🔥 Firebase Desde Cero - Guía Completa</h1>
+                <p class="hero-subtitle">Aprende Firebase desde los fundamentos hasta conceptos avanzados</p>
+                <blockquote class="hero-quote">
+                    "Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business."
+                </blockquote>
+                <a href="#temas" class="btn btn-primary">Explorar Temas</a>
+            </div>
+        </section>
+
+        <section id="temas" class="topics">
+            <div class="container">
+                <h2>📖 Temas del Curso</h2>
+                <p class="topics-intro">Haz clic en cualquier tema para ver el contenido detallado</p>
+
+                <div class="topics-grid">
+                    <!-- Módulo 1 -->
+                    <div class="topic-card" data-topic="topic1">
+                        <div class="topic-header">
+                            <span class="topic-icon">📌</span>
+                            <h3>Módulo 1: Fundamentos</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema1-1">Introducción a Firebase</a></li>
+                            <li><a href="#tema1-2">Creación de proyecto</a></li>
+                            <li><a href="#tema1-3">Firebase Authentication</a></li>
+                            <li><a href="#tema1-4">Cloud Firestore</a></li>
+                        </ul>
+                        <a href="#tema1-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 2 -->
+                    <div class="topic-card" data-topic="topic2">
+                        <div class="topic-header">
+                            <span class="topic-icon">⚙️</span>
+                            <h3>Módulo 2: Intermedio</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema2-1">Auth con Google y Facebook</a></li>
+                            <li><a href="#tema2-2">CRUD en Firestore</a></li>
+                            <li><a href="#tema2-3">Queries y filtros</a></li>
+                            <li><a href="#tema2-4">Reglas de seguridad</a></li>
+                        </ul>
+                        <a href="#tema2-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 3 -->
+                    <div class="topic-card" data-topic="topic3">
+                        <div class="topic-header">
+                            <span class="topic-icon">🚀</span>
+                            <h3>Módulo 3: Avanzado</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema3-1">Cloud Functions</a></li>
+                            <li><a href="#tema3-2">Firebase Hosting</a></li>
+                            <li><a href="#tema3-3">Cloud Messaging (FCM)</a></li>
+                            <li><a href="#tema3-4">Analytics y Crashlytics</a></li>
+                        </ul>
+                        <a href="#tema3-1" class="btn-topic">Ver tema →</a>
+                    </div>
+                </div>
+
+                <!-- Contenido Detallado de Temas -->
+                <div class="topic-content" id="topic-content">
+                    <!-- Tema 1-1 -->
+                    <div class="content-detail" id="tema1-1">
+                        <h3>📌 Introducción a Firebase</h3>
+                        <div class="content-body">
+                            <p><strong>¿Qué es Firebase?</strong> Firebase es una plataforma de desarrollo de aplicaciones móviles y web desarrollada por Google. Ofrece una amplia gama de herramientas y servicios que ayudan a los desarrolladores a crear aplicaciones de alta calidad sin necesidad de gestionar infraestructura compleja.</p>
+
+                            <h4>Servicios principales de Firebase:</h4>
+                            <ul>
+                                <li><strong>Authentication:</strong> Gestión de usuarios segura y sencilla</li>
+                                <li><strong>Firestore/Realtime Database:</strong> Bases de datos NoSQL en tiempo real</li>
+                                <li><strong>Cloud Functions:</strong> Backend sin servidor</li>
+                                <li><strong>Hosting:</strong> Alojamiento web rápido y seguro</li>
+                                <li><strong>Cloud Messaging:</strong> Notificaciones push</li>
+                                <li><strong>Analytics:</strong> Análisis de uso de la aplicación</li>
+                            </ul>
+
+                            <h4>Historia de Firebase:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Evento</th>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>Firebase fundado como empresa independiente</td>
+                                </tr>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>Adquirido por Google</td>
+                                </tr>
+                                <tr>
+                                    <td>2016</td>
+                                    <td>Firebase 2.0 - Expansión a web y juegos</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Firebase con más de 2 millones de apps</td>
+                                </tr>
+                            </table>
+
+                            <div class="info-box">
+                                <strong>💡 Dato curioso:</strong> Firebase comenzó como un servicio de base de datos en tiempo real y ahora es una plataforma completa de desarrollo con más de 20 servicios.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-2 -->
+                    <div class="content-detail" id="tema1-2">
+                        <h3>🔧 Creación de Proyecto</h3>
+                        <div class="content-body">
+                            <h4>Pasos para crear un proyecto:</h4>
+                            <ol>
+                                <li>Ve a <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></li>
+                                <li>Haz clic en "Agregar proyecto" o "Create a project"</li>
+                                <li>Ingresa el nombre del proyecto</li>
+                                <li>Configura Google Analytics (opcional)</li>
+                                <li>Haz clic en "Crear proyecto"</li>
+                            </ol>
+
+                            <h4>Configurar aplicación web:</h4>
+                            <pre><code>// 1. En Firebase Console, ve a Configuración del proyecto
+// 2. Agrega una aplicación web
+// 3. Copia la configuración
+
+const firebaseConfig = {
+  apiKey: "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXX",
+  authDomain: "tu-proyecto.firebaseapp.com",
+  projectId: "tu-proyecto",
+  storageBucket: "tu-proyecto.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef123456",
+  measurementId: "G-XXXXXXXXXX"
+};</code></pre>
+
+                            <h4>Instalar Firebase SDK:</h4>
+                            <pre><code># Con npm
+npm install firebase
+
+# Con yarn
+yarn add firebase
+
+# Con CDN (HTML)
+&lt;script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"&gt;&lt;/script&gt;</code></pre>
+
+                            <h4>Inicializar Firebase:</h4>
+                            <pre><code>// Firebase v9+ (Modular)
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Firebase v8 (Compat - más sencillo para principiantes)
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa variables de entorno para almacenar tu configuración de Firebase. Nunca subas las claves API a repositorios públicos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-3 -->
+                    <div class="content-detail" id="tema1-3">
+                        <h3>🔐 Firebase Authentication</h3>
+                        <div class="content-body">
+                            <h4>¿Qué es Firebase Auth?</h4>
+                            <p>Firebase Authentication proporciona funciones de autenticación completas para tu aplicación. Soporta múltiples métodos de autenticación incluyendo email/password, proveedores de identidad (Google, Facebook, Twitter), y autenticación anónima.</p>
+
+                            <h4>Métodos de autenticación soportados:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Método</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>Email/Password</td>
+                                    <td>Autenticación tradicional con credenciales</td>
+                                </tr>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>Login con cuenta de Google</td>
+                                </tr>
+                                <tr>
+                                    <td>Facebook</td>
+                                    <td>Login con cuenta de Facebook</td>
+                                </tr>
+                                <tr>
+                                    <td>GitHub</td>
+                                    <td>Login con cuenta de GitHub</td>
+                                </tr>
+                                <tr>
+                                    <td>Teléfono</td>
+                                    <td>Verificación por SMS</td>
+                                </tr>
+                                <tr>
+                                    <td>Anónimo</td>
+                                    <td>Usuario temporal sin credenciales</td>
+                                </tr>
+                            </table>
+
+                            <h4>Objeto User:</h4>
+                            <pre><code>// Estructura del objeto usuario
+{
+  uid: "abc123",              // ID único del usuario
+  email: "usuario@email.com", // Email verificado
+  displayName: "Juan",        // Nombre visible
+  photoURL: "https://...",    // URL de foto de perfil
+  emailVerified: true,        // Email verificado
+  isAnonymous: false,         // Si es anónimo
+  providerData: [...],        // Proveedores vinculados
+  metadata: {
+    creationTime: 1234567890,
+    lastSignInTime: 1234567890
+  }
+}</code></pre>
+
+                            <h4>Estado de autenticación:</h4>
+                            <pre><code>import { onAuthStateChanged } from 'firebase/auth';
+
+// Escuchar cambios en el estado de autenticación
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // Usuario está logueado
+    console.log('Usuario:', user.email);
+  } else {
+    // Usuario no está logueado
+    console.log('No hay usuario');
+  }
+});</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Seguridad:</strong> Las reglas de seguridad de Firebase son tu primera línea de defensa. Nunca confíes únicamente en la validación del cliente.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-4 -->
+                    <div class="content-detail" id="tema1-4">
+                        <h3>📊 Cloud Firestore</h3>
+                        <div class="content-body">
+                            <h4>¿Qué es Cloud Firestore?</h4>
+                            <p>Cloud Firestore es una base de datos NoSQL flexible y escalable para aplicaciones móviles, web y de servidor. Los datos se almacenan en documentos organizados en colecciones.</p>
+
+                            <h4>Comparación con Realtime Database:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>Cloud Firestore</th>
+                                    <th>Realtime Database</th>
+                                </tr>
+                                <tr>
+                                    <td>Modelo de datos</td>
+                                    <td>Documentos y colecciones</td>
+                                    <td>Árbol JSON único</td>
+                                </tr>
+                                <tr>
+                                    <td>Consultas</td>
+                                    <td>Avanzadas y flexibles</td>
+                                    <td>Básicas</td>
+                                </tr>
+                                <tr>
+                                    <td>Escalabilidad</td>
+                                    <td>Automática</td>
+                                    <td>Manual (sharding)</td>
+                                </tr>
+                                <tr>
+                                    <td>Precios</td>
+                                    <td>Por operación</td>
+                                    <td>Por ancho de banda</td>
+                                </tr>
+                            </table>
+
+                            <h4>Estructura de Firestore:</h4>
+                            <pre><code>// Colecciones y Documentos
+/usuarios                    // Colección
+  /usuario123               // Documento
+    /nombre: "Juan"         // Campo
+    /edad: 30               // Campo
+    /posts                  // Subcolección
+      /post1
+        /titulo: "Mi post"
+        /contenido: "..."
+
+// Jerarquía: Colección → Documento → Colección → Documento</code></pre>
+
+                            <h4>Tipos de datos en Firestore:</h4>
+                            <pre><code>// Tipos soportados
+{
+  string: "texto",
+  number: 42,
+  boolean: true,
+  null: null,
+  array: [1, 2, 3],
+  object: { nested: "value" },
+  timestamp: new Date(),
+  geopoint: new GeoPoint(51.5074, -0.1278),
+  reference: docRef,
+  blob: new Uint8Array(...)
+}</code></pre>
+
+                            <h4>Escuchar cambios en tiempo real:</h4>
+                            <pre><code>import { onSnapshot, collection } from 'firebase/firestore';
+
+// Escuchar una colección
+const unsubscribe = onSnapshot(collection(db, 'usuarios'), (snapshot) => {
+  snapshot.docChanges().forEach((change) => {
+    if (change.type === 'added') {
+      console.log('Nuevo usuario:', change.doc.data());
+    }
+    if (change.type === 'modified') {
+      console.log('Usuario modificado:', change.doc.data());
+    }
+    if (change.type === 'removed') {
+      console.log('Usuario eliminado');
+    }
+  });
+});
+
+// Dejar de escuchar
+unsubscribe();</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-1 -->
+                    <div class="content-detail" id="tema2-1">
+                        <h3>🔗 Auth con Google y Facebook</h3>
+                        <div class="content-body">
+                            <h4>Configurar proveedores de identidad:</h4>
+                            <ol>
+                                <li>En Firebase Console, ve a Authentication → Sign-in method</li>
+                                <li>Selecciona el proveedor (Google, Facebook, etc.)</li>
+                                <li>Habilita el proveedor</li>
+                                <li>Configura las credenciales necesarias</li>
+                                <li>Guarda los cambios</li>
+                            </ol>
+
+                            <h4>Login con Google:</h4>
+                            <pre><code>import { 
+  GoogleAuthProvider, 
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult
+} from 'firebase/auth';
+
+const provider = new GoogleAuthProvider();
+
+// Método 1: Popup
+async function loginConGoogle() {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    
+    // Obtener token de acceso
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    
+    console.log('Usuario logueado:', user.email);
+    return user;
+  } catch (error) {
+    console.error('Error:', error.code);
+  }
+}
+
+// Método 2: Redirect (mejor para móviles)
+async function loginConGoogleRedirect() {
+  await signInWithRedirect(auth, provider);
+}
+
+// Obtener resultado después del redirect
+getRedirectResult(auth).then((result) => {
+  const user = result.user;
+  console.log('Usuario:', user.email);
+});</code></pre>
+
+                            <h4>Login con Facebook:</h4>
+                            <pre><code>import { FacebookAuthProvider } from 'firebase/auth';
+
+const provider = new FacebookAuthProvider();
+
+// Agregar scopes (permisos adicionales)
+provider.addScope('email');
+provider.addScope('public_profile');
+
+// Configurar idioma
+provider.setCustomParameters({ lang: 'es' });
+
+async function loginConFacebook() {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    
+    // Obtener token de acceso de Facebook
+    const credential = FacebookAuthProvider.credentialFromResult(result);
+    const accessToken = credential.accessToken;
+    
+    return user;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}</code></pre>
+
+                            <h4>Vincular múltiples proveedores:</h4>
+                            <pre><code>import { 
+  linkWithPopup,
+  unlink,
+  getProviders 
+} from 'firebase/auth';
+
+// Vincular Google a cuenta existente
+async function vincularGoogle(user) {
+  const provider = new GoogleAuthProvider();
+  try {
+    await linkWithPopup(user, provider);
+    console.log('Google vinculado');
+  } catch (error) {
+    console.error('Error al vincular:', error);
+  }
+}
+
+// Obtener proveedores vinculados
+const providers = getProviders(user);
+console.log('Proveedores:', providers);
+
+// Desvincular proveedor
+await unlink(user, 'google.com');</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Importante:</strong> Para Facebook, necesitas crear una app en developers.facebook.com y agregar las credenciales en Firebase Console.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-2 -->
+                    <div class="content-detail" id="tema2-2">
+                        <h3>📝 CRUD en Firestore</h3>
+                        <div class="content-body">
+                            <h4>Crear documentos:</h4>
+                            <pre><code>import { 
+  collection, 
+  addDoc, 
+  doc, 
+  setDoc 
+} from 'firebase/firestore';
+
+// Opción 1: Auto-ID (recomendado)
+async function crearUsuario(nombre, email) {
+  const docRef = await addDoc(collection(db, 'usuarios'), {
+    nombre: nombre,
+    email: email,
+    createdAt: new Date(),
+    activo: true
+  });
+  console.log('Documento creado con ID:', docRef.id);
+  return docRef.id;
+}
+
+// Opción 2: ID personalizado
+async function crearUsuarioConId(userId, datos) {
+  await setDoc(doc(db, 'usuarios', userId), {
+    ...datos,
+    createdAt: new Date()
+  });
+}</code></pre>
+
+                            <h4>Leer documentos:</h4>
+                            <pre><code>import { 
+  doc, 
+  getDoc, 
+  collection, 
+  getDocs,
+  query,
+  where
+} from 'firebase/firestore';
+
+// Leer un documento
+async function obtenerUsuario(userId) {
+  const docRef = doc(db, 'usuarios', userId);
+  const docSnap = await getDoc(docRef);
+  
+  if (docSnap.exists()) {
+    console.log('Datos:', docSnap.data());
+    return { id: docSnap.id, ...docSnap.data() };
+  } else {
+    console.log('Documento no encontrado');
+    return null;
+  }
+}
+
+// Leer colección completa
+async function obtenerTodosUsuarios() {
+  const querySnapshot = await getDocs(collection(db, 'usuarios'));
+  const usuarios = [];
+  querySnapshot.forEach((doc) => {
+    usuarios.push({ id: doc.id, ...doc.data() });
+  });
+  return usuarios;
+}
+
+// Leer con filtro
+async function obtenerUsuariosActivos() {
+  const q = query(
+    collection(db, 'usuarios'), 
+    where('activo', '==', true)
+  );
+  const querySnapshot = await getDocs(q);
+  // ...
+}</code></pre>
+
+                            <h4>Actualizar documentos:</h4>
+                            <pre><code>import { 
+  doc, 
+  updateDoc, 
+  increment,
+  arrayUnion,
+  arrayRemove
+} from 'firebase/firestore';
+
+// Actualizar campos específicos
+async function actualizarUsuario(userId, datos) {
+  const userRef = doc(db, 'usuarios', userId);
+  await updateDoc(userRef, {
+    ...datos,
+    updatedAt: new Date()
+  });
+}
+
+// Operaciones atómicas
+async function incrementarVisitas(postId) {
+  const postRef = doc(db, 'posts', postId);
+  await updateDoc(postRef, {
+    visitas: increment(1)
+  });
+}
+
+// Arrays
+async function agregarTag(postId, tag) {
+  const postRef = doc(db, 'posts', postId);
+  await updateDoc(postRef, {
+    tags: arrayUnion(tag)  // Agrega si no existe
+  });
+}
+
+async function removerTag(postId, tag) {
+  const postRef = doc(db, 'posts', postId);
+  await updateDoc(postRef, {
+    tags: arrayRemove(tag)  // Remueve si existe
+  });
+}</code></pre>
+
+                            <h4>Eliminar documentos:</h4>
+                            <pre><code>import { doc, deleteDoc } from 'firebase/firestore';
+
+async function eliminarUsuario(userId) {
+  await deleteDoc(doc(db, 'usuarios', userId));
+  console.log('Usuario eliminado');
+}
+
+// Eliminar con confirmación
+async function eliminarConConfirmacion(userId) {
+  const userRef = doc(db, 'usuarios', userId);
+  
+  // Primero verificar que existe
+  const docSnap = await getDoc(userRef);
+  if (docSnap.exists()) {
+    await deleteDoc(userRef);
+    return true;
+  }
+  return false;
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa transacciones para operaciones que requieren consistencia, como transferencias de saldo.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-3 -->
+                    <div class="content-detail" id="tema2-3">
+                        <h3>🔍 Queries y Filtros</h3>
+                        <div class="content-body">
+                            <h4>Consultas básicas:</h4>
+                            <pre><code>import { 
+  collection, 
+  query, 
+  where, 
+  getDocs,
+  orderBy,
+  limit
+} from 'firebase/firestore';
+
+// Filtro simple
+const q = query(
+  collection(db, 'usuarios'),
+  where('edad', '>=', 18)
+);
+
+// Múltiples filtros
+const q2 = query(
+  collection(db, 'usuarios'),
+  where('activo', '==', true),
+  where('edad', '>=', 18)
+);
+
+// Operadores disponibles
+// ==, !=, <, <=, >, >=
+// array-contains, array-contains-any
+// in, not-in</code></pre>
+
+                            <h4>Ordenamiento:</h4>
+                            <pre><code>// Ordenar por campo
+const q = query(
+  collection(db, 'productos'),
+  orderBy('precio', 'desc')  // o 'asc'
+);
+
+// Ordenar por múltiples campos
+const q2 = query(
+  collection(db, 'productos'),
+  orderBy('categoria', 'asc'),
+  orderBy('precio', 'desc')
+);
+
+// Limitar resultados
+const q3 = query(
+  collection(db, 'productos'),
+  orderBy('ventas', 'desc'),
+  limit(10)  // Top 10
+);</code></pre>
+
+                            <h4>Consultas con array-contains:</h4>
+                            <pre><code>// Buscar documentos que contengan un valor en array
+const q = query(
+  collection(db, 'posts'),
+  where('tags', 'array-contains', 'javascript')
+);
+
+// Buscar documentos que contengan cualquiera de los valores
+const q2 = query(
+  collection(db, 'posts'),
+  where('tags', 'array-contains-any', ['javascript', 'python'])
+);</code></pre>
+
+                            <h4>Consultas con IN:</h4>
+                            <pre><code>// Buscar por múltiples valores exactos (máximo 10)
+const q = query(
+  collection(db, 'usuarios'),
+  where('pais', 'in', ['España', 'México', 'Argentina'])
+);
+
+// NOT IN (máximo 10)
+const q2 = query(
+  collection(db, 'usuarios'),
+  where('pais', 'not-in', ['España', 'Portugal'])
+);</code></pre>
+
+                            <h4>Paginación:</h4>
+                            <pre><code>// Paginación con startAfter
+async function obtenerProductos(pageSize = 10, lastVisible = null) {
+  let q = query(
+    collection(db, 'productos'),
+    orderBy('nombre'),
+    limit(pageSize)
+  );
+  
+  if (lastVisible) {
+    q = query(q, startAfter(lastVisible));
+  }
+  
+  const snapshot = await getDocs(q);
+  const productos = snapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data()
+  }));
+  
+  // Último documento para la siguiente página
+  const lastDoc = snapshot.docs[snapshot.docs.length - 1];
+  
+  return { productos, lastDoc };
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Importante:</strong> Para consultas que combinan orderBy con where, necesitas crear un índice compuesto en Firebase Console.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-4 -->
+                    <div class="content-detail" id="tema2-4">
+                        <h3>🔒 Reglas de Seguridad</h3>
+                        <div class="content-body">
+                            <h4>Estructura de reglas:</h4>
+                            <pre><code>rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Regla para toda la base de datos
+    match /{document=**} {
+      allow read, write: if false;  // Denegar todo por defecto
+    }
+    
+    // Reglas específicas por colección
+    match /usuarios/{userId} {
+      allow read: if true;  // Público leer
+      allow write: if request.auth != null 
+                   && request.auth.uid == userId;  // Solo el dueño
+    }
+  }
+}</code></pre>
+
+                            <h4>Variables disponibles:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>request.auth</td>
+                                    <td>Datos del usuario autenticado</td>
+                                </tr>
+                                <tr>
+                                    <td>request.auth.uid</td>
+                                    <td>ID del usuario</td>
+                                </tr>
+                                <tr>
+                                    <td>request.time</td>
+                                    <td>Timestamp del servidor</td>
+                                </tr>
+                                <tr>
+                                    <td>resource.data</td>
+                                    <td>Datos existentes del documento</td>
+                                </tr>
+                                <tr>
+                                    <td>request.resource.data</td>
+                                    <td>Datos que se están escribiendo</td>
+                                </tr>
+                            </table>
+
+                            <h4>Ejemplos de reglas:</h4>
+                            <pre><code>// Solo usuarios autenticados
+match /posts/{postId} {
+  allow read: if request.auth != null;
+  allow write: if request.auth != null;
+}
+
+// Validar datos de entrada
+match /usuarios/{userId} {
+  allow create: if request.auth.uid == userId
+                && request.resource.data.keys().hasAll(['nombre', 'email'])
+                && request.resource.data.nombre is string
+                && request.resource.data.email is string;
+  
+  allow update: if request.auth.uid == userId
+                && request.resource.data.keys().hasOnly(['nombre', 'fotoURL']);
+}
+
+// Limitar tamaño de datos
+match /mensajes/{mensajeId} {
+  allow create: if request.resource.data.texto.size() <= 500;
+}
+
+// Validar formato de email
+function isValidEmail(email) {
+  return email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$');
+}
+
+match /usuarios/{userId} {
+  allow create: if isValidEmail(request.resource.data.email);
+}</code></pre>
+
+                            <h4>Reglas para subcolecciones:</h4>
+                            <pre><code>match /usuarios/{userId} {
+  allow read, write: if request.auth.uid == userId;
+  
+  // Subcolección posts
+  match /posts/{postId} {
+    allow read: if true;  // Posts públicos
+    allow create: if request.auth.uid == userId;
+    allow update, delete: if request.auth.uid == userId;
+  }
+  
+  // Subcolección configuracion
+  match /configuracion/{configId} {
+    allow read, write: if request.auth.uid == userId;
+  }
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Importante:</strong> Las reglas de seguridad no son validadores de datos. Siempre valida en el cliente y en Cloud Functions para mayor seguridad.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-1 -->
+                    <div class="content-detail" id="tema3-1">
+                        <h3>⚡ Cloud Functions</h3>
+                        <div class="content-body">
+                            <h4>¿Qué son Cloud Functions?</h4>
+                            <p>Cloud Functions for Firebase es un entorno de ejecución sin servidor que te permite ejecutar código backend automáticamente en respuesta a eventos activados por funciones de Firebase y HTTPS.</p>
+
+                            <h4>Tipos de funciones:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>HTTP</td>
+                                    <td>Funciones callable desde HTTP</td>
+                                </tr>
+                                <tr>
+                                    <td>Firestore</td>
+                                    <td>Se activan con cambios en Firestore</td>
+                                </tr>
+                                <tr>
+                                    <td>Auth</td>
+                                    <td>Se activan con eventos de autenticación</td>
+                                </tr>
+                                <tr>
+                                    <td>Scheduled</td>
+                                    <td>Se ejecutan en un cron programado</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage</td>
+                                    <td>Se activan con cambios en Cloud Storage</td>
+                                </tr>
+                            </table>
+
+                            <h4>Configuración inicial:</h4>
+                            <pre><code># Instalar Firebase CLI
+npm install -g firebase-tools
+
+# Inicializar funciones
+firebase init functions
+
+# Estructura creada
+/functions
+  /index.js
+  package.json
+  .gitignore</code></pre>
+
+                            <h4>Función HTTP:</h4>
+                            <pre><code>const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+
+admin.initializeApp();
+
+// Función HTTP tradicional
+exports.saludar = functions.https.onRequest((req, res) => {
+  const nombre = req.query.nombre || 'Mundo';
+  res.send(`Hola ${nombre}!`);
+});
+
+// Función callable (recomendada para clientes Firebase)
+exports.saludarCallable = functions.https.onCall(async (data, context) => {
+  // Verificar autenticación
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+      'unauthenticated',
+      'Usuario debe estar autenticado'
+    );
+  }
+  
+  const nombre = data.nombre || 'Mundo';
+  return { mensaje: `Hola ${nombre}!` };
+});</code></pre>
+
+                            <h4>Función Firestore trigger:</h4>
+                            <pre><code>// Se activa cuando se crea un documento
+exports.onUsuarioCreado = functions.firestore
+  .document('usuarios/{userId}')
+  .onCreate(async (snap, context) => {
+    const usuario = snap.data();
+    const userId = context.params.userId;
+    
+    // Enviar email de bienvenida
+    await enviarEmailBienvenida(usuario.email, usuario.nombre);
+    
+    // Crear documento de perfil
+    await snap.ref.parent.parent()
+      .doc('perfiles')
+      .collection(userId)
+      .add({ createdAt: admin.firestore.FieldValue.serverTimestamp() });
+    
+    return null;
+  });
+
+// Se activa cuando se actualiza un documento
+exports.onUsuarioActualizado = functions.firestore
+  .document('usuarios/{userId}')
+  .onUpdate(async (change, context) => {
+    const antes = change.before.data();
+    const despues = change.after.data();
+    
+    if (antes.email !== despues.email) {
+      // Email cambió, enviar notificación
+      await notificarCambioEmail(despues.email);
+    }
+    
+    return null;
+  });</code></pre>
+
+                            <h4>Función programada (Cron):</h4>
+                            <pre><code>// Ejecutar todos los días a medianoche
+exports.limpiezaDiaria = functions.pubsub
+  .schedule('0 0 * * *')
+  .timeZone('America/New_York')
+  .onRun(async (context) => {
+    // Eliminar usuarios inactivos
+    const hace30Dias = new Date();
+    hace30Dias.setDate(hace30Dias.getDate() - 30);
+    
+    const db = admin.firestore();
+    const snapshot = await db.collection('usuarios')
+      .where('ultimaActividad', '<', hace30Dias)
+      .get();
+    
+    const batch = db.batch();
+    snapshot.docs.forEach(doc => batch.delete(doc.ref));
+    await batch.commit();
+    
+    console.log(`${snapshot.size} usuarios eliminados`);
+    return null;
+  });</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa funciones callable en lugar de HTTP para mejor seguridad y manejo automático de tokens de autenticación.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-2 -->
+                    <div class="content-detail" id="tema3-2">
+                        <h3>🌐 Firebase Hosting</h3>
+                        <div class="content-body">
+                            <h4>¿Qué es Firebase Hosting?</h4>
+                            <p>Firebase Hosting es un servicio de alojamiento web diseñado para desarrolladores. Ofrece hosting seguro, rápido y confiable para tu aplicación web con SSL gratuito y CDN global.</p>
+
+                            <h4>Características principales:</h4>
+                            <ul>
+                                <li><strong>SSL gratuito:</strong> HTTPS automático</li>
+                                <li><strong>CDN global:</strong> Contenido entregado desde el edge más cercano</li>
+                                <li><strong>Rollback instantáneo:</strong> Revierte a versiones anteriores</li>
+                                <li><strong>Preview channels:</strong> URLs de preview para cada PR</li>
+                                <li><strong>Integración con Functions:</strong> Hosting dinámico</li>
+                            </ul>
+
+                            <h4>Configuración inicial:</h4>
+                            <pre><code># Inicializar hosting
+firebase init hosting
+
+# Estructura creada
+/public
+  index.html
+  css/
+  js/
+  images/
+/firebase.json
+.hostingrc
+
+# firebase.json configuración básica
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}</code></pre>
+
+                            <h4>Deploy:</h4>
+                            <pre><code># Deploy a producción
+firebase deploy --only hosting
+
+# Deploy solo de hosting (más rápido)
+firebase deploy hosting
+
+# Deploy a canal de preview
+firebase hosting:channel:deploy preview-pr-123
+
+# Listar canales
+firebase hosting:channel:list
+
+# Eliminar canal
+firebase hosting:channel:delete preview-pr-123</code></pre>
+
+                            <h4>Configuración avanzada:</h4>
+                            <pre><code>{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json"],
+    
+    // Rewrites para SPA
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    
+    // Headers personalizados
+    "headers": [
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      }
+    ],
+    
+    // Redirecciones
+    "redirects": [
+      {
+        "source": "/old-page",
+        "destination": "/new-page",
+        "type": 301
+      }
+    ],
+    
+    // Integración con Cloud Functions
+    "functions": "functions"
+  }
+}</code></pre>
+
+                            <h4>Hosting con Functions (SSR):</h4>
+                            <pre><code>// functions/index.js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hola desde SSR!');
+});
+
+app.get('/api/usuarios', async (req, res) => {
+  const usuarios = await obtenerUsuarios();
+  res.json(usuarios);
+});
+
+exports.app = functions.https.onRequest(app);
+
+// firebase.json
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ]
+  }
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa preview channels para revisar cambios antes de hacer deploy a producción. Ideal para CI/CD.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-3 -->
+                    <div class="content-detail" id="tema3-3">
+                        <h3>📱 Cloud Messaging (FCM)</h3>
+                        <div class="content-body">
+                            <h4>¿Qué es Firebase Cloud Messaging?</h4>
+                            <p>FCM es una solución de mensajería multiplataforma que permite enviar mensajes y notificaciones push de manera confiable y sin costo a Android, iOS y web.</p>
+
+                            <h4>Tipos de mensajes:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>Notification</td>
+                                    <td>Mensaje con payload predefinido (app en background)</td>
+                                </tr>
+                                <tr>
+                                    <td>Data</td>
+                                    <td>Mensaje personalizado (app en foreground o background)</td>
+                                </tr>
+                                <tr>
+                                    <td>Topic</td>
+                                    <td>Enviar a múltiples dispositivos suscritos a un tema</td>
+                                </tr>
+                            </table>
+
+                            <h4>Configurar en cliente web:</h4>
+                            <pre><code>import { 
+  getMessaging, 
+  getToken,
+  onMessage
+} from 'firebase/messaging';
+
+const messaging = getMessaging(app);
+
+// Solicitar permiso y obtener token
+async function solicitarPermisoNotificaciones() {
+  try {
+    const permission = await Notification.requestPermission();
+    
+    if (permission === 'granted') {
+      const token = await getToken(messaging, {
+        vapidKey: 'TU_VAPID_KEY'
+      });
+      
+      console.log('Token FCM:', token);
+      
+      // Guardar token en Firestore
+      await guardarTokenEnBD(token);
+      return token;
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Escuchar mensajes en foreground
+onMessage(messaging, (payload) => {
+  console.log('Mensaje recibido:', payload);
+  
+  const { title, body } = payload.notification;
+  
+  // Mostrar notificación personalizada
+  new Notification(title, {
+    body: body,
+    icon: '/icon.png'
+  });
+});</code></pre>
+
+                            <h4>Enviar mensaje desde Cloud Functions:</h4>
+                            <pre><code>const admin = require('firebase-admin');
+admin.initializeApp();
+
+async function enviarNotificacion(userId, titulo, cuerpo) {
+  // Obtener token del usuario
+  const userDoc = await admin.firestore()
+    .collection('usuarios')
+    .doc(userId)
+    .get();
+  
+  const token = userDoc.data()?.fcmToken;
+  
+  if (!token) {
+    console.log('Usuario sin token FCM');
+    return;
+  }
+  
+  const message = {
+    notification: {
+      title: titulo,
+      body: cuerpo
+    },
+    data: {
+      tipo: 'mensaje_personal',
+      userId: userId
+    },
+    token: token
+  };
+  
+  try {
+    const response = await admin.messaging().send(message);
+    console.log('Mensaje enviado:', response);
+  } catch (error) {
+    console.error('Error al enviar:', error);
+  }
+}</code></pre>
+
+                            <h4>Enviar a topic:</h4>
+                            <pre><code>// Suscribirse a topic (cliente)
+import { subscribeToTopic, unsubscribeFromTopic } from 'firebase/messaging';
+
+await subscribeToTopic(messaging, 'noticias');
+await unsubscribeFromTopic(messaging, 'noticias');
+
+// Enviar a topic (Functions)
+const message = {
+  notification: {
+    title: 'Nueva noticia!',
+    body: 'Hay una nueva noticia disponible'
+  },
+  topic: 'noticias'
+};
+
+await admin.messaging().send(message);</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Para producción, implementa un sistema de gestión de tokens inválidos para limpiar tokens expirados de tu base de datos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-4 -->
+                    <div class="content-detail" id="tema3-4">
+                        <h3>📊 Analytics y Crashlytics</h3>
+                        <div class="content-body">
+                            <h4>Firebase Analytics:</h4>
+                            <p>Firebase Analytics es una solución de análisis de aplicaciones gratuita e ilimitada que proporciona información sobre el uso de la aplicación y la participación de los usuarios.</p>
+
+                            <h4>Eventos automáticos:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>first_open</td>
+                                    <td>Primera apertura de la app</td>
+                                </tr>
+                                <tr>
+                                    <td>session_start</td>
+                                    <td>Inicio de sesión</td>
+                                </tr>
+                                <tr>
+                                    <td>screen_view</td>
+                                    <td>Vista de pantalla</td>
+                                </tr>
+                                <tr>
+                                    <td>user_engagement</td>
+                                    <td>Tiempo de uso</td>
+                                </tr>
+                            </table>
+
+                            <h4>Eventos personalizados:</h4>
+                            <pre><code>import { getAnalytics, logEvent } from 'firebase/analytics';
+
+const analytics = getAnalytics(app);
+
+// Loguear evento personalizado
+logEvent(analytics, 'compra_realizada', {
+  producto_id: 'prod_123',
+  producto_nombre: 'Premium Plan',
+  precio: 9.99,
+  moneda: 'USD',
+  metodo_pago: 'tarjeta_credito'
+});
+
+// Eventos recomendados por Firebase
+logEvent(analytics, 'add_to_cart', {
+  items: [{
+    item_id: 'SKU_123',
+    item_name: 'Producto X',
+    price: 29.99,
+    quantity: 2
+  }]
+});
+
+logEvent(analytics, 'begin_checkout', {
+  currency: 'USD',
+  value: 59.98,
+  items: [...]
+});</code></pre>
+
+                            <h4>Parámetros de usuario:</h4>
+                            <pre><code>import { setUserProperties } from 'firebase/analytics';
+
+// Establecer propiedades del usuario
+setUserProperties(analytics, {
+  nivel: 'premium',
+  tipo_usuario: 'registrado',
+  fecha_registro: '2024-01-15'
+});
+
+// Establecer ID de usuario (para cross-device)
+import { setUserId } from 'firebase/analytics';
+setUserId(analytics, usuario.uid);</code></pre>
+
+                            <h4>Firebase Crashlytics:</h4>
+                            <p>Crashlytics es una solución de seguimiento de fallos ligera y en tiempo real que te ayuda a priorizar y estabilizar la calidad de tu aplicación.</p>
+
+                            <pre><code>// Web (a través de Firebase Console)
+// Los crashes se reportan automáticamente
+
+// Personalizar reporte
+import { getCrashlytics } from 'firebase/crashlytics';
+
+const crashlytics = getCrashlytics(app);
+
+// Agregar logs personalizados
+crashlytics.log('Usuario inició sesión');
+crashlytics.log('Intentando cargar datos...');
+
+// Establecer claves personalizadas
+crashlytics.setCustomKey('usuario_id', usuario.uid);
+crashlytics.setCustomKey('nivel_app', 'premium');
+
+// Registrar usuario (sin PII)
+crashlytics.setUserId(usuario.uid);
+
+// Forzar crash para testing (solo desarrollo)
+if (process.env.NODE_ENV === 'development') {
+  crashlytics.crash();
+}</code></pre>
+
+                            <h4>Dashboard de Analytics:</h4>
+                            <ul>
+                                <li><strong>Retención:</strong> Usuarios que regresan</li>
+                                <li><strong>Funnels:</strong> Conversión por pasos</li>
+                                <li><strong>Audiencias:</strong> Segmentos de usuarios</li>
+                                <li><strong>Eventos:</strong> Todos los eventos registrados</li>
+                                <li><strong>DebugView:</strong> Ver eventos en tiempo real</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa DebugView durante el desarrollo para verificar que los eventos se están registrando correctamente antes de lanzar a producción.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contenido" class="content">
+            <div class="container">
+                <h2>📚 Contenido del Curso</h2>
+
+                <div class="modules">
+                    <div class="module">
+                        <h3>Módulo 1: Fundamentos</h3>
+                        <ul>
+                            <li>Introducción a Firebase</li>
+                            <li>Creación de proyecto</li>
+                            <li>Firebase Authentication</li>
+                            <li>Cloud Firestore</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 2: Intermedio</h3>
+                        <ul>
+                            <li>Auth con Google y Facebook</li>
+                            <li>CRUD en Firestore</li>
+                            <li>Queries y filtros</li>
+                            <li>Reglas de seguridad</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 3: Avanzado</h3>
+                        <ul>
+                            <li>Cloud Functions</li>
+                            <li>Firebase Hosting</li>
+                            <li>Cloud Messaging (FCM)</li>
+                            <li>Analytics y Crashlytics</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejemplos" class="examples">
+            <div class="container">
+                <h2>📝 Ejemplos Rápidos</h2>
+
+                <div class="code-block">
+                    <h3>Inicialización de Firebase</h3>
+                    <pre><code class="language-javascript">import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: "TU_API_KEY",
+  authDomain: "tu-proyecto.firebaseapp.com",
+  projectId: "tu-proyecto",
+  storageBucket: "tu-proyecto.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abcdef"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Authentication</h3>
+                    <pre><code class="language-javascript">import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from 'firebase/auth';
+
+// Registro
+await createUserWithEmailAndPassword(auth, email, password);
+
+// Login
+await signInWithEmailAndPassword(auth, email, password);
+
+// Logout
+await signOut(auth);
+
+// Escuchar cambios
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log('Usuario logueado:', user.uid);
+  }
+});</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Firestore CRUD</h3>
+                    <pre><code class="language-javascript">import {
+  collection, addDoc, getDocs,
+  doc, updateDoc, deleteDoc
+} from 'firebase/firestore';
+
+// Crear
+await addDoc(collection(db, 'usuarios'), {
+  nombre: 'Juan',
+  email: 'juan@email.com'
+});
+
+// Leer
+const snapshot = await getDocs(collection(db, 'usuarios'));
+snapshot.forEach(doc => console.log(doc.data()));
+
+// Actualizar
+await updateDoc(doc(db, 'usuarios', 'id'), {
+  edad: 31
+});
+
+// Eliminar
+await deleteDoc(doc(db, 'usuarios', 'id'));</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources">
+            <div class="container">
+                <h2>📖 Recursos Adicionales</h2>
+
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Documentación Oficial</h4>
+                        <ul>
+                            <li><a href="https://firebase.google.com/docs" target="_blank">Firebase Documentation</a></li>
+                            <li><a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></li>
+                            <li><a href="https://github.com/firebase" target="_blank">Firebase GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Herramientas</h4>
+                        <ul>
+                            <li>Firebase Console</li>
+                            <li>Firebase Emulator Suite</li>
+                            <li>Firestore Rules Playground</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Comunidades</h4>
+                        <ul>
+                            <li><a href="https://firebase.google.com/community" target="_blank">Firebase Community</a></li>
+                            <li>Stack Overflow - Firebase</li>
+                            <li>Reddit r/firebase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>👨‍💻 Desarrollado por Isaac Esteban Haro Torres</h2>
+                <p class="contact-title">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>📱 WhatsApp: 098805517</p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                    <p>🌐 Portafolio: <a href="https://ieharo1.github.io/portafolio-isaac.haro/" target="_blank">ieharo1.github.io/portafolio-isaac.haro/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
