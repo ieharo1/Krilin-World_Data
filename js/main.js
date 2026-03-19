@@ -1,7 +1,7 @@
-// Main JavaScript para Firebase Desde Cero (Krilin-World_Data)
+// Main JavaScript para React Desde Cero
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🔥 Firebase Desde Cero - Sitio cargado correctamente');
+    console.log('☕ React Desde Cero - Sitio cargado correctamente');
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -46,18 +46,18 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
         if (window.pageYOffset > 100) {
-            header.style.background = 'rgba(255, 111, 0, 0.95)';
-            header.style.boxShadow = '0 4px 30px rgba(255, 111, 0, 0.3)';
+            header.style.background = 'rgba(178, 88, 10, 0.98)';
+            header.style.boxShadow = '0 4px 30px rgba(248, 152, 32, 0.3)';
         } else {
-            header.style.background = 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            header.style.background = 'var(--secondary-color)';
+            header.style.boxShadow = 'none';
         }
     });
 
     document.querySelectorAll('.code-block, .content-body pre').forEach(block => {
         const btn = document.createElement('button');
         btn.textContent = '📋 Copiar';
-        btn.style.cssText = 'position:absolute;top:10px;right:10px;background:var(--primary-color);color:var(--secondary-color);border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:0.85rem;font-weight:bold;z-index:10;';
+        btn.style.cssText = 'position:absolute;top:10px;right:10px;background:var(--accent-color);border:none;padding:5px 10px;border-radius:5px;cursor:pointer;font-size:0.8rem;z-index:10;';
         if (getComputedStyle(block).position === 'static') block.style.position = 'relative';
         block.appendChild(btn);
         btn.addEventListener('click', () => {
@@ -68,5 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('%c🔥 ¡Bienvenido a Firebase Desde Cero!', 'font-size: 20px; color: #FFCA28; font-weight: bold;');
+    console.log('%c☕ ¡Bienvenido a React Desde Cero!', 'font-size: 20px; color: #61dafb; font-weight: bold;');
 });

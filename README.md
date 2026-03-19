@@ -1,18 +1,18 @@
-# 🔥 FIREBASE DESDE CERO - GUÍA COMPLETA
+# ⚛️ REACT DESDE CERO - GUÍA COMPLETA
 
-**Firebase desde Cero** es un sitio educativo completo diseñado para enseñar Firebase desde los fundamentos hasta conceptos avanzados, con explicaciones claras, ejemplos prácticos y código listo para usar.
+**React desde Cero** es un sitio educativo completo diseñado para enseñar React desde los fundamentos hasta aplicaciones web modernas, con explicaciones claras, ejemplos prácticos y código listo para usar.
 
-> *"Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business."*
+> *"React es la librería JavaScript más popular para construir interfaces de usuario interactivas."*
 
 ---
 
 ## 🎯 ¿Qué es este Proyecto?
 
-Este proyecto proporciona un recurso educativo gratuito para aprender Firebase, incluyendo:
+Este proyecto proporciona un recurso educativo gratuito para aprender React, incluyendo:
 
 - **Documentación completa** de cada tema
 - **Ejemplos de código** listos para ejecutar
-- **Ejercicios prácticos** para reforzar el aprendizaje
+- **Guías paso a paso** para configuración
 - **Sitio web educativo** con navegación intuitiva
 
 ---
@@ -21,56 +21,76 @@ Este proyecto proporciona un recurso educativo gratuito para aprender Firebase, 
 
 ### Módulo 1: Fundamentos
 
-1. **Introducción**
-   - ¿Qué es Firebase?
-   - Servicios de Firebase
-   - Casos de uso
+1. **¿Qué es React?**
+   - Introducción a React
+   - Historia y versiones
+   - Virtual DOM
 
 2. **Instalación**
-   - Crear proyecto en Firebase Console
-   - Firebase CLI
-   - Configuración en Web, iOS, Android
-   - Firebase SDK
+   - Vite o Create React App
+   - Extensiones VS Code
+   - Estructura del proyecto
 
-3. **Conceptos básicos**
-   - Firebase Authentication
-   - Cloud Firestore
-   - Realtime Database
-   - Firebase Storage
+3. **Componentes**
+   - Componentes funcionales
+   - Retornar JSX
+   - Exportar e importar
+
+4. **JSX y Props**
+   - Sintaxis JSX
+   - Props en componentes
+   - Destructuring
 
 ### Módulo 2: Intermedio
 
-4. **Ejemplos prácticos**
-   - Auth con email/password
-   - Auth con Google, Facebook
-   - CRUD en Firestore
-   - Queries y filtros
+5. **useState y useEffect**
+   - Hook useState
+   - Hook useEffect
+   - Cleanup
 
-5. **Buenas prácticas**
-   - Reglas de seguridad
-   - Índices compuestos
-   - Optimización de queries
-   - Costos y límites
+6. **Eventos**
+   - onClick y otros eventos
+   - Pasar funciones
+   - Event objects
+
+7. **Listas y Keys**
+   - map() para listas
+   - Keys únicas
+   - Renderizado condicional
+
+8. **Formularios**
+   - Inputs controlados
+   - useState para formularios
+   - handleSubmit
 
 ### Módulo 3: Avanzado
 
-6. **Casos reales**
-   - Cloud Functions
-   - Firebase Hosting
-   - Cloud Messaging (FCM)
-   - Analytics y Crashlytics
+9. **Context API**
+   - Crear Context
+   - Provider
+   - useContext
 
-7. **Proyecto final**
-   - Aplicación completa
-   - Deploy a producción
-   - Monitoreo y métricas
+10. **useReducer**
+    - Reducer pattern
+    - dispatch y actions
+    - Cuándo usar
+
+11. **React Router**
+    - BrowserRouter
+    - Routes y Route
+    - useParams y useNavigate
+
+12. **APIs y Fetch**
+    - useEffect para APIs
+    - Promesas y async/await
+    - Loading y errores
 
 ---
 
 ## 🗂️ Estructura del Proyecto
 
 ```
-Krilin-World_Data/
+REACT-DESDE-CERO-GUIA-COMPLETA/
 ├── index.html          # Página principal
 ├── css/
 │   └── styles.css      # Estilos del sitio
@@ -89,118 +109,32 @@ Krilin-World_Data/
 2. Navega por las secciones del curso
 3. Haz clic en los temas para ver la documentación detallada
 
-### Opción 2: Ejecutar los Ejemplos
+### Opción 2: Practicar con React
 
-1. Crea proyecto en Firebase Console
-2. Copia configuración del SDK
-3. Ejecuta ejemplos en tu proyecto
-
-### Requisitos
-
-- Cuenta de Google
-- Node.js y npm
-- Firebase CLI instalado
+1. Instala Node.js desde nodejs.org
+2. Crea proyecto: `npm create vite@latest mi-app -- --template react`
+3. Entra: `cd mi-app && npm install && npm run dev`
+4. Practica los conceptos del curso
 
 ---
 
-## 📝 Ejemplos Rápidos
+## 📝 Comandos Principales
 
-### Inicialización
+### Vite
 
-```javascript
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-
-const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto",
-  storageBucket: "tu-proyecto.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+```bash
+npm create vite@latest mi-app -- --template react
+npm install
+npm run dev
+npm run build
 ```
 
-### Authentication
+### npm
 
-```javascript
-import { 
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
-} from 'firebase/auth';
-
-// Registro
-await createUserWithEmailAndPassword(auth, email, password);
-
-// Login
-await signInWithEmailAndPassword(auth, email, password);
-
-// Logout
-await signOut(auth);
-
-// Escuchar cambios
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log('Usuario logueado:', user.uid);
-  }
-});
-```
-
-### Firestore CRUD
-
-```javascript
-import { 
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  updateDoc,
-  deleteDoc,
-  query,
-  where
-} from 'firebase/firestore';
-
-// Crear
-await addDoc(collection(db, 'usuarios'), {
-  nombre: 'Juan',
-  email: 'juan@email.com'
-});
-
-// Leer
-const snapshot = await getDocs(collection(db, 'usuarios'));
-snapshot.forEach(doc => console.log(doc.data()));
-
-// Actualizar
-await updateDoc(doc(db, 'usuarios', 'id'), {
-  edad: 31
-});
-
-// Eliminar
-await deleteDoc(doc(db, 'usuarios', 'id'));
-```
-
-### Cloud Functions
-
-```javascript
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-
-admin.initializeApp();
-
-exports.onUserCreate = functions.firestore
-  .document('usuarios/{userId}')
-  .onCreate((snap, context) => {
-    const userData = snap.data();
-    console.log('Nuevo usuario:', userData);
-    return null;
-  });
+```bash
+npm install react react-dom
+npm install react-router-dom
+npm install axios
 ```
 
 ---
@@ -210,40 +144,30 @@ exports.onUserCreate = functions.firestore
 ### 1. Leer la Teoría
 Cada tema comienza con una explicación clara del concepto.
 
-### 2. Ver Ejemplos
+### 2. Ver los Ejemplos
 Los ejemplos de código muestran la aplicación práctica.
 
 ### 3. Practicar
-Los ejercicios te permiten aplicar lo aprendido.
+Crea tu propia app y experimenta con componentes.
 
-### 4. Experimentar
-Modifica los ejemplos para entender cómo funcionan.
+### 4. Construir
+Desarrolla una aplicación completa integrando todo lo aprendido.
 
 ---
 
-## 🔧 Comandos Esenciales
+## 🔧 Herramientas Recomendadas
 
-### Firebase CLI
+### Editores
 
-```bash
-# Instalar Firebase CLI
-npm install -g firebase-tools
+- **VS Code** - Recomendado con extensiones
+- **WebStorm** - IDE profesional
+- **Atom** - Editor configurable
 
-# Login
-firebase login
+### Extensiones VS Code
 
-# Inicializar proyecto
-firebase init
-
-# Deploy functions
-firebase deploy --only functions
-
-# Deploy hosting
-firebase deploy --only hosting
-
-# Emuladores locales
-firebase emulators:start
-```
+- ES7+ React/Redux/React-Native snippets
+- Prettier
+- ESLint
 
 ---
 
@@ -251,53 +175,25 @@ firebase emulators:start
 
 ### Documentación Oficial
 
-- [Firebase Documentation](https://firebase.google.com/docs)
-- [Firebase Console](https://console.firebase.google.com/)
-- [Firebase GitHub](https://github.com/firebase)
-
-### Herramientas Recomendadas
-
-- **Firebase Console** - Panel de control
-- **Firebase Emulator Suite** - Testing local
-- **Firestore Rules Playground** - Prueba reglas
+- [React Documentation](https://react.dev/)
+- [React Router](https://reactrouter.com/)
+- [React Hooks](https://react.dev/reference/react)
 
 ### Comunidades
 
-- [Firebase Community](https://firebase.google.com/community)
-- [Stack Overflow - Firebase](https://stackoverflow.com/questions/tagged/firebase)
-- [Reddit r/firebase](https://www.reddit.com/r/firebase/)
+- [Reactiflux](https://discord.gg/reactiflux)
+- [Reddit r/reactjs](https://reddit.com/r/reactjs)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/reactjs)
 
 ---
 
 ## 💡 Consejos para Principiantes
 
-1. **Empieza con el plan gratuito**: Firebase tiene generoso free tier.
-2. **Configura reglas de seguridad**: Desde el inicio.
-3. **Usa emuladores**: Para desarrollo local rápido.
-4. **Monitoriza costos**: Revisa el uso en Console.
-5. **Aprende Firestore**: Es más moderno que Realtime Database.
-
----
-
-## ⚠️ Mejores Prácticas
-
-### Seguridad
-
-- Nunca expongas credenciales en el cliente
-- Usa reglas de seguridad en Firestore
-- Implementa validación en backend
-
-### Rendimiento
-
-- Usa índices para queries complejos
-- Implementa pagination
-- Cachea datos cuando sea posible
-
-### Costos
-
-- Evita reads innecesarios
-- Usa listeners eficientemente
-- Limpia datos antiguos
+1. **Aprende JavaScript moderno** - ES6+ es fundamental
+2. **Practica con componentes** - Son la base de React
+3. **Usa Hooks** - useState y useEffect son esenciales
+4. **No temas los errores** - Son parte del aprendizaje
+5. **Sigue las convenciones** - Componentes, archivos, nombres
 
 ---
 
@@ -305,21 +201,24 @@ firebase emulators:start
 
 ### Nivel Básico
 
-1. Sistema de registro y login
-2. CRUD de usuarios
-3. Perfil de usuario con foto
+1. Crear un componente simple
+2. Usar useState con un contador
+3. Renderizar una lista
+4. Crear un formulario simple
 
 ### Nivel Intermedio
 
-1. Chat en tiempo real
-2. Sistema de posts con likes
-3. Notificaciones push
+1. App con múltiples componentes
+2. Consumir una API REST
+3. Navegación con React Router
+4. Context para estado global
 
 ### Nivel Avanzado
 
-1. E-commerce completo
-2. App con funciones serverless
-3. Sistema de analytics personalizado
+1. App completa con autenticación
+2. useReducer para estado complejo
+3. Optimización con memo y useMemo
+4. Testing con React Testing Library
 
 ---
 
